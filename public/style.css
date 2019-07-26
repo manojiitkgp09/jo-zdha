@@ -1,0 +1,156 @@
+div {
+    box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+.table-container {
+    display: block;
+    margin: 1em auto;
+    width: 90%;
+}
+
+.flex-table {
+    display: flex;
+    flex-flow: row wrap;
+    border-left: solid 1px #d9d9d9;
+    transition: 0.5s;
+}
+
+.flex-table:first-of-type {
+    border-top: solid 1px #1565C0;
+    border-left: solid 1px #1565C0;
+}
+
+.flex-table:first-of-type .flex-row {
+    background: #387ed1;
+    color: white;
+    border-color: #1565C0;
+}
+
+.flex-table.row:nth-child(odd) .flex-row {
+    background: #f4f2f1;
+}
+
+.flex-table.row:hover {
+    background: #F5F5F5;
+    transition: 500ms;
+}
+
+.flex-row {
+    width: calc(100% / 6);
+    text-align: center;
+    padding: 0.5em 0.5em;
+    border-bottom: solid 1px #d9d9d9;
+}
+
+.flex-row:last-child {
+    border-right: solid 1px #d9d9d9;
+}
+
+@media all and (max-width: 767px) {
+    .flex-row {
+        width: calc(100% / 2);
+    }
+
+    .flex-row.first {
+        width: 100%;
+    }
+
+    .flex-row:last-child {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 430px) {
+
+    .flex-table .flex-row {
+        border-bottom: 0;
+    }
+
+    .flex-table .flex-row:last-of-type {
+        border-bottom: solid 1px #d9d9d9;
+    }
+
+    .header .flex-row {
+        border-bottom: solid 1px;
+    }
+
+    .flex-row {
+        width: 100%;
+    }
+
+    .flex-row.first {
+        width: 100%;
+        border-bottom: solid 1px #d9d9d9;
+    }
+
+}
+
+.flex-action-bar {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+}
+
+.home {
+    flex: 1;
+    text-align: left;
+    font-size: 1.7em;
+}
+
+.search {
+    flex: 3
+}
+.search-form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type="search"] {
+    box-sizing: border-box;
+    background: #E9E9E9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.35em 0.75em;
+    border: none;
+    font-size: 1.1em;
+    text-decoration: none;
+    line-height: normal;
+    max-height: 3em;
+}
+
+button[type="submit"] {
+    box-sizing: border-box;
+    border-radius: 0px 2px 2px 0px;
+    background: #ff5722;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.35em 0.75em;
+    border: none;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="search"] {
+    flex: 2 0 250px;
+}
+
+button[type="submit"] {
+    flex: 1 0 90px;
+}

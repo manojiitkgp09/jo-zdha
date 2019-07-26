@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="flex-action-bar" role="rowgroup">
+    <div class="flex-item home"><a href="/">Home</a></div>
+    <div class="flex-item search">
+        <form class="search-form" method="get" action="/search/">
+            <input required type="search" name="name" value="{% if stock_name %}{{ stock_name }}{% endif %}" placeholder="Search by Stock Name" class="search-input">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </div>
+</div>
+<div class="table-container" role="table" aria-label="Stocks">
+
+    <div class="flex-table header" role="rowgroup">
+    <div class="flex-row first" role="columnheader">Code</div>
+    <div class="flex-row" role="columnheader">Name</div>
+    <div class="flex-row" role="columnheader">Open</div>
+    <div class="flex-row" role="columnheader">High</div>
+    <div class="flex-row" role="columnheader">Low</div>
+    <div class="flex-row" role="columnheader">Close</div>
+    </div>
+    {% if stocks %}
+    {% for stock in stocks %}
+    <div class="flex-table row" role="rowgroup">
+        <div class="flex-row first" role="cell">{{ stock["code"] }}</div>
+        <div class="flex-row" role="cell">{{ stock["name"] }}</div>
+        <div class="flex-row" role="cell">{{ stock["open"] }}</div>
+        <div class="flex-row" role="cell">{{ stock["high"] }}</div>
+        <div class="flex-row" role="cell">{{ stock["low"] }}</div>
+        <div class="flex-row" role="cell">{{ stock["close"] }}</div>
+    </div>
+    {% endfor %}
+    {% else %}
+        <div class="center" >No Data Found</div>
+    {% endif %}
+</div>
