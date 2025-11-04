@@ -1,4 +1,40 @@
 ## Cache
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
 
+## IDE
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+## Environment
+.env
+.venv
+venv/
+ENV/
+env/
+
+## Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+## Logs
+*.log
+logs/
+
+## Temporary files
+*.csv
+*.zip
+*.tmp
+
+## OS
+.DS_Store
+Thumbs.db

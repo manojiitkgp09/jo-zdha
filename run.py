@@ -1,4 +1,12 @@
 """
+DEPRECATED: This module is deprecated and kept for reference only.
+Please use crawler.py instead.
+
+Migration:
+- Replace: from run import Crawler
+- With: from crawler import BSEBhavcopyCrawler
+
+DEPRECATED MODULE - DO NOT USE IN PRODUCTION
 
 Zerodha
 

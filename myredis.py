@@ -1,5 +1,20 @@
+"""
+DEPRECATED: This module is deprecated and kept for backward compatibility only.
+Please use redis_client.py instead.
+
+Migration:
+- Replace: from myredis import MyRedis
+- With: from redis_client import RedisClient
+"""
+import warnings
 import os
 import redis
+
+warnings.warn(
+    "myredis.py is deprecated. Use redis_client.RedisClient instead.",
+    DeprecationWarning,
+    stacklevel=2
+)
 
 LOCAL_REDIS_SERVER_URL = 'redis://127.0.0.1:6379/'
 
