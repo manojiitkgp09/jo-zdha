@@ -1,7 +1,23 @@
+"""
+DEPRECATED: This module is deprecated and kept for reference only.
+Please use app.py instead.
+
+Migration:
+- Run: python app.py (instead of python webapp.py)
+
+DEPRECATED MODULE - DO NOT USE IN PRODUCTION
+"""
+import warnings
 import os
 
 import cherrypy
 import jinja2
+
+warnings.warn(
+    "webapp.py is deprecated. Use app.py instead.",
+    DeprecationWarning,
+    stacklevel=2
+)
 
 from myredis import MyRedis
 
